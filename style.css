@@ -74,24 +74,103 @@ body{
 .header{
     grid-area: header;
     background : var(--tertiaryColor);
-    color: white;
-    padding-top: 20px;
+    color: rgb(0, 0, 0);
     padding-left: 40px;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 1.5fr;
     grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "searchbar notif"
+    "pfp bouton";
 
 }
 
+.searchbar{
+    grid-area: searchbar;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items:center;
+}
+
+.searchbar>input{
+    width: 95%;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--mainColor);
+}
+
+.searchbar>a:link,
+.searchbar>a:active,
+.searchbar>a:hover,
+.searchbar>a:visited{
+    color: black;
+}
+
+.notif{
+    grid-area: notif;
+    display: grid;
+    grid-template-columns: 15px 50px 1fr;
+    align-items:center;
+    gap: 25px;
+    font-weight: bold;
+    margin-left:27% ;
+}
+
+.notif>img{
+    border-radius: 50%;
+}
+
+.notif>a:link,
+.notif>a:active,
+.notif>a:hover,
+.notif>a:visited{
+    color: black;
+}
+
+.pfp{
+    grid-area: pfp;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.pfp>img{
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.bouton{
+    grid-area: bouton;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-right: 40px;
+    gap: 20px;
+}
+
+.bouton>button{
+    border: none;
+    border-radius: 50px;
+    height: 35px;
+    width: 130px;
+    font-weight: bolder;
+    background-color: var(--secondaryColor);
+    color: white;
+}
+.bouton>button:active{
+    background-color: #4a6459;
+}
 .sidebar{
     grid-area: sidebar;
     background: var(--secondaryColor);
     color: white;
     display: grid;
-    grid-template-rows: 10px 2fr 1fr;
+    grid-template-rows: 10px 200px 100px;
     min-width: 200px;
     max-width: 1fr;
-    gap: 40px;
+    gap: 100px;
     padding-left: 20px;
     padding-top: 20px;
     font-weight: bold;
