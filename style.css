@@ -1,98 +1,122 @@
-
 .roboto {
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
     font-variation-settings:
-      "wdth" 100;
-  }
+        "wdth" 100;
+}
+
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-  
-  /* 2. Remove default margin */
-  * {
+}
+
+/* 2. Remove default margin */
+* {
     margin: 0;
-  }
-  
-  body {
+}
+
+body {
     /* 3. Add accessible line-height */
     line-height: 1.5;
     /* 4. Improve text rendering */
     -webkit-font-smoothing: antialiased;
-  }
-  
-  /* 5. Improve media defaults */
-  img, picture, video, canvas, svg {
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
-  }
-  
-  /* 6. Inherit fonts for form controls */
-  input, button, textarea, select {
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
     font: inherit;
-  }
-  
-  /* 7. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
-  }
-  
-  /* 8. Improve line wrapping */
-  p {
+}
+
+/* 8. Improve line wrapping */
+p {
     text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-wrap: balance;
-  }
-  
-  /*
+}
+
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
+#root,
+#__next {
     isolation: isolate;
-  }
+}
 
 
 
 
-body{
+body {
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 6fr;
-    grid-template-areas: 
-    "sidebar header"
-    "sidebar board";
-    --mainColor : #CCE3DE ;
-    --secondaryColor : #6B9080 ;
-    --tertiaryColor : #F6FFF8;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar board";
+    --mainColor: #CCE3DE;
+    --secondaryColor: #6B9080;
+    --tertiaryColor: #F6FFF8;
     font-family: "Roboto", serif;
 }
 
-.header{
+.header {
     grid-area: header;
-    background : var(--tertiaryColor);
+    min-height: 150px;
+    max-height: 1fr;
+    background: var(--tertiaryColor);
     color: rgb(0, 0, 0);
     padding-left: 40px;
     display: grid;
     grid-template-columns: 3fr 1.5fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "searchbar notif"
-    "pfp bouton";
+    grid-template-areas:
+        "searchbar notif"
+        "pfp bouton";
 
 }
 
-.searchbar{
+.searchbar {
     grid-area: searchbar;
     display: grid;
     grid-template-columns: 30px 1fr;
-    align-items:center;
+    align-items: center;
 }
 
-.searchbar>input{
+.searchbar>input {
     width: 95%;
     border-radius: 50px;
     border: none;
@@ -102,32 +126,32 @@ body{
 .searchbar>a:link,
 .searchbar>a:active,
 .searchbar>a:hover,
-.searchbar>a:visited{
+.searchbar>a:visited {
     color: black;
 }
 
-.notif{
+.notif {
     grid-area: notif;
     display: grid;
     grid-template-columns: 15px 50px 1fr;
-    align-items:center;
+    align-items: center;
     gap: 25px;
     font-weight: bold;
-    margin-left:27% ;
+    margin-left: 27%;
 }
 
-.notif>img{
+.notif>img {
     border-radius: 50%;
 }
 
 .notif>a:link,
 .notif>a:active,
 .notif>a:hover,
-.notif>a:visited{
+.notif>a:visited {
     color: black;
 }
 
-.pfp{
+.pfp {
     grid-area: pfp;
     display: grid;
     grid-template-columns: 80px 1fr;
@@ -136,12 +160,12 @@ body{
     font-weight: bold;
 }
 
-.pfp>img{
+.pfp>img {
     border-radius: 50%;
     margin-bottom: 20px;
 }
 
-.bouton{
+.bouton {
     grid-area: bouton;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -150,7 +174,7 @@ body{
     gap: 20px;
 }
 
-.bouton>button{
+.bouton>button {
     border: none;
     border-radius: 50px;
     height: 35px;
@@ -159,16 +183,18 @@ body{
     background-color: var(--secondaryColor);
     color: white;
 }
-.bouton>button:active{
+
+.bouton>button:active {
     background-color: #4a6459;
 }
-.sidebar{
+
+.sidebar {
     grid-area: sidebar;
     background: var(--secondaryColor);
     color: white;
     display: grid;
     grid-template-rows: 10px 200px 100px;
-    min-width: 200px;
+    min-width: 240px;
     max-width: 1fr;
     gap: 100px;
     padding-left: 20px;
@@ -178,11 +204,12 @@ body{
 
 .logo>a:link,
 .nav>div>a:link,
-.settings>div>a:link{
+.settings>div>a:link {
     color: white;
     background-color: transparent;
     text-decoration: none;
 }
+
 .logo>a:visited,
 .nav>div>a:visited,
 .settings>div>a:visited {
@@ -190,7 +217,7 @@ body{
     background-color: transparent;
     text-decoration: none;
 }
-  
+
 .logo>a:hover,
 .nav>div>a:hover,
 .settings>div>a:hover {
@@ -198,7 +225,7 @@ body{
     background-color: transparent;
     text-decoration: none;
 }
-  
+
 .logo>a:active,
 .nav>div>a:active,
 .settings>div>a:active {
@@ -208,43 +235,139 @@ body{
 }
 
 .sidebar>.nav,
-.sidebar>.settings{
+.sidebar>.settings {
     display: grid;
     grid-template-rows: repeat(autofill);
     gap: 10px;
 }
 
-.sidebar>.logo{
+.sidebar>.logo {
     display: grid;
     grid-template-columns: 35px 2fr;
     align-items: center;
-    font-size: 22px;
+    font-size: 30px;
 }
 
 .sidebar>.nav>div,
-.sidebar>.settings>div{
+.sidebar>.settings>div {
     display: grid;
     grid-template-columns: 35px 2fr;
     align-items: center;
 
 }
- 
-.logo{
+
+.logo {
     grid-row-start: 1;
 }
-.nav{
+
+.nav {
     grid-row-start: 2;
 
 }
-.settings{
+
+.settings {
     grid-row-start: 3;
 
 }
 
-.board{
+.board {
     grid-area: board;
     background: var(--mainColor);
-    color: white;
-    padding-top: 20px;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 2.8fr 1fr;
+    grid-template-areas:
+        "main side";
+    gap: 20px;
+}
 
+.main {
+    display: grid;
+    grid-area: main;
+    gap: 20px;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: 30px ;
+}
+.mainTitle{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.card {
+    border: solid var(--secondaryColor);
+    background-color: var(--tertiaryColor);
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 0.3fr;
+
+    align-items: center;
+    padding-left: 20px;
+}
+
+.card>h3{
+    padding: 0;
+}
+
+.project>p{
+    color: rgb(97, 96, 96);
+}
+
+.icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 70%;
+}
+
+.side{
+    display: grid;
+    grid-template-rows: 30px 45% 30px 35%;
+    gap: 20px;
+}
+
+.annoucement{
+    border: solid var(--secondaryColor);
+    background-color: var(--tertiaryColor);
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.sharing{
+    border-top: solid var(--secondaryColor);
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.first{
+    padding: 10px;
+}
+
+.trending{
+    border: solid var(--secondaryColor);
+    background-color: var(--tertiaryColor);
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%
+}
+
+.profile{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 15px;
+}
+
+.profile>img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.profile>div>p{
+    color: rgb(97, 96, 96);
 }
