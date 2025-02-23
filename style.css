@@ -336,6 +336,10 @@ body {
     grid-template-rows: 33% 33% 33%;
 }
 
+.annoucement>div>p{
+    color: rgb(97, 96, 96);
+}
+
 .sharing{
     border-top: solid var(--secondaryColor);
     border-radius: 3px;
