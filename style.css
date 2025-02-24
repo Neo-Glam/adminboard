@@ -184,8 +184,12 @@ body {
     color: white;
 }
 
+.bouton>button:hover {
+    background-color: #014366;
+}
+
 .bouton>button:active {
-    background-color: #4a6459;
+    background-color: #025581;
 }
 
 .sidebar {
