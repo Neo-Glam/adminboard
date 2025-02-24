@@ -87,9 +87,9 @@ body {
     grid-template-areas:
         "sidebar header"
         "sidebar board";
-    --mainColor: #CCE3DE;
-    --secondaryColor: #6B9080;
-    --tertiaryColor: #F6FFF8;
+    --mainColor: #669BBC;
+    --secondaryColor: #003049;
+    --tertiaryColor: #FFFFFF;
     font-family: "Roboto", serif;
 }
 
@@ -279,13 +279,14 @@ body {
     grid-template-areas:
         "main side";
     gap: 20px;
+    -webkit-box-shadow: inset 0px 24px 23px -18px rgba(0,0,0,0.67); 
+    box-shadow: inset 0px 24px 23px -18px rgba(0,0,0,0.67);
 }
 
 .main {
     display: grid;
     grid-area: main;
     gap: 20px;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
     grid-template-rows: 30px ;
 }
 .mainTitle{
@@ -317,7 +318,8 @@ body {
 .icons{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-left: 70%;
+    gap: 10px;
+    padding-left: 60%;
 }
 
 .side{
